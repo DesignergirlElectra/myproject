@@ -1,0 +1,16 @@
+.bigteam{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: initial;
+}
+.text-inr p{
+    color:grey;
+}
+.team-btn a {
+    text-decoration: none;
+    color: white;
+    background:#f47059;
+    font-size: 20px;
+    padding: 15px 60px;
+}

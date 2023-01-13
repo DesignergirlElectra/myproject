@@ -1,0 +1,44 @@
+
+.banner{
+    position: relative;
+}
+.banner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: -21px;
+    top: -75px;
+    background: url('../../assets/shape.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: -1;
+    opacity: .3;
+}
+.banner-text-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.banner-htext {
+    font-size: 62px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+.sub-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 3px 10px grey;
+}
+
+.sub-btn a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    font-size: 20px;
+    padding: 15px 60px;
+}

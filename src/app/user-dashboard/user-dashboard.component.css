@@ -1,0 +1,129 @@
+.header-wrap {
+    background: darkseagreen;
+    padding: 10px 0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.kanban-nav{
+    display: flex;
+    align-items: center;
+    gap:40px
+}
+
+
+.hero-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.welcome-text {
+    font-size: 50px;
+    font-weight: 700;
+}
+.welcome-view {
+    text-align: center;
+    padding: 30px;
+}
+.welcome-view span {
+    text-decoration: none;
+    color: black;
+    background: darkseagreen;
+    font-size: 25px;
+    padding: 17px 63px;
+    border-radius: 25px 0;
+    cursor: pointer;
+}
+.kanban-logo {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: fuchsia;
+}
+
+.kanban-logo:after {
+    position: absolute;
+    content: '';
+    height: 59%;
+    width: 50%;
+    border: 2px solid black;
+    top: 0;
+    left: -50%;
+}
+
+.kanban-logo:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 20%;
+    border: 3px solid blue;
+    top: -17%;
+    left: -40%;
+}
+.logout span{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.hero-card-wrap {
+    background: #bcb9b96b;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 80vh;
+}
+.hero-crt{
+    font-size: 20px;
+}
+.task-status {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+.pending {
+    background: white;
+    padding: 15px;
+    color:grey;
+}
+.pending:hover {
+    box-shadow: 2px 3px 6px grey;
+    transition: .5s all;
+    background: #f3f4fd;
+}
+.complete{
+    background: white;
+    padding: 15px;
+}
+.cross-btn {
+    float: right;
+    padding: 5px 14px;
+    color:black;
+    font-weight: 700;
+    cursor:pointer;
+}
+.cross-btn:hover{
+    color: red;
+}
+.edit{
+float:right;
+}
+.pendingtasktitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5d61ac;
+    text-transform: capitalize;
+}
+.same-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.new{
+    width: 30%;
+}

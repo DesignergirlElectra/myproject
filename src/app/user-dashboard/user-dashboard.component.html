@@ -1,0 +1,105 @@
+<app-animationbackground></app-animationbackground>
+<app-header></app-header>
+<!-- <div class="header-wrap">
+    <div class="container">
+        <div class="header">
+            <div class="kanban-logo">Kanban.</div>
+            <div class="kanban-nav">
+                <div class="logout"><span (click)="logout()">Logout</span></div>
+                <div class="home"><a href = "">Home</a></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<section>
+    <div class="hero-banner">
+        <div class="banner-inner">
+            <div class="welcome-text">Welcome to Kanban Admin Board</div>
+            <div class="welcome-view"><span (click)="alltaskview()">View All Task</span></div>
+            <div class="welcome-view view-deleted"><span (click)="deletedtaskview()">View deleted Task</span></div>
+        </div>
+    </div>
+</section>
+<section class="display">
+    <div class="container">
+       
+           
+                <div class="row hero-card-wrap">
+                    <!-- to view all tasks -->
+                    <div *ngFor="let item of apivar" class="col-md-4" [ngStyle]="{'display':style1}">
+                        <div class="pending mt-2 ">
+                            <button type="button"  class="back-btn edit" (click)="openPopup()"><span class="btn-class1"><i class="fa-solid fa-pen-to-square"></i></span> </button>
+                            <!-- <div class="cross-btn" (click)="delete(item)">X</div> -->
+                            <div class="pendingtasktitle mb-1">{{item.taskname}}</div>
+                            <div class="pendingtask mb-1">{{item.taskdetails}}</div>
+                            <div class="pendingtask mb-1">Created by : {{item.author}}</div>
+                             <div class="same-hero">
+                                <div class="pendingtask"><span><i class="fa-solid fa-clock"></i></span> {{item.submittedAt}}</div>
+                                <div class="mark-as">
+                                    <button type="button" (click)="mark(item)" class="back-btn"><span class="btn-class">Mark as Complete</span></button>
+
+                                    <!-- Popup content starts -->
+                                    <div
+                                        class="modal"
+                                        tabindex="-1"
+                                        role="dialog"
+                                        [ngStyle]="{'display':displayStyle}">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Edit Task</h4>
+                                                    <div class ="cross-btn" (click)="close()">X</div>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <form #form="ngForm" (ngSubmit)="closePopup(item,description.value,created.value)">
+                                                            <div class="form-group">
+                                                                <label for="desc">New description</label>
+                                                                <input type="text" #description="ngModel" name="desc" placeholder="Enter the Description" 
+                                                                class="form-control" required ngModel>
+                                                                <div *ngIf="description?.touched && description?.invalid">
+                                                                    Description can't be empty
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="author">New author</label>
+                                                                <input type="text" #created ="ngModel" name="author" placeholder ="Update author name"
+                                                                class="form-control" required ngModel> 
+                                                                <div *ngIf="created?.touched && created?.invalid">
+                                                                    Author shouldn't be blank
+                                                                </div> 
+                                                            </div>
+                                                            <div class="modal-footer back-btn">
+                                                                <button type="submit" class="btn-class">
+                                                                    Update
+                                                                </button>
+                                                            </div>
+                                                        </form>                               
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <!-- Popup content end -->
+                                </div>
+                             </div>
+                        </div>    
+                    </div>
+        
+                    <!-- to view deleted task -->
+            
+                    <div [ngStyle]="{'display':style2}">
+                        <div *ngFor="let item of apivar" class="col-md-4" >
+                            <div class="pending mt-2"  *ngIf="item.status==='deleted'">
+                                <div class="pendingtasktitle mb-1">{{item.taskname}}</div>
+                                <div class="pendingtask mb-1">{{item.taskdetails}}</div>
+                                <div class="pendingtask mb-1">Created by : {{item.author}}</div>
+                                <div class="pendingtask"><span><i class="fa-solid fa-clock"></i></span> {{item.submittedAt}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+        
+</section>

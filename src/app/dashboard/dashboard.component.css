@@ -1,0 +1,89 @@
+/* .header-wrap {
+    background: #242525;
+    padding: 10px 0;
+}
+.inner-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.head-logo {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: logo;
+    color: #8bf3f3;
+}
+.Login a {
+    font-size: 20px;
+    text-decoration: none;
+    color:#f3f4fd;
+} */
+.line{color: #f3f4fd;}
+.add {
+    background: darkcyan;
+    padding: 1%;
+}
+.dasboard {
+    background: azure;
+}
+.hero-card-wrap {
+    background: #bcb9b96b;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 80vh;
+}
+.hero-crt{
+    font-size: 20px;
+}
+.task-status {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+.pending {
+    background: white;
+    padding: 15px;
+    color:grey;
+}
+.pending:hover {
+    box-shadow: 2px 3px 6px grey;
+    transition: .5s all;
+    background: #f3f4fd;
+}
+.complete{
+    background: white;
+    padding: 15px;
+}
+.cross-btn {
+    float: right;
+    padding: 5px 14px;
+    color:black;
+    font-weight: 700;
+    cursor:pointer;
+}
+.cross-btn:hover{
+    color: red;
+}
+.edit{
+float:right;
+}
+.pendingtasktitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5d61ac;
+    text-transform: capitalize;
+}
+.same-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal{
+    
+}

@@ -1,0 +1,37 @@
+
+
+
+<div class="wrapper">
+    <div class="container main-container">
+        <div class="row">
+          <div class="col-left">
+            <div class="login-text">
+              <h2>Logo</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget eros dapibus, ultricies tellus vitae, consectetur tortor. Etiam rutrum placerat
+              </p>
+              <a class="btn" href="">Read More</a>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="login-form">
+              <h2>Login</h2>
+              <form #loginform = 'ngForm' (ngSubmit)="login()">
+                <div class="form-group">
+                  <label for = "username">UserName</label>
+                  <input type = "text" #username="ngModel" name ="username" placeholder="Enter username" class="form-control" required [(ngModel)]="lform.username" ngModel>
+              </div>
+              <div class="form-group mt-2">
+                  <label for = "password">Password</label>
+                  <input type = "password" #password ="ngModel" name ="password" class="form-control"required [(ngModel)]="lform.password" ngModel>
+              </div>
+              <div class="login-btn" style = "padding-top: 20px;">
+                  <button type="submit" class="back-btn"><span class="btn-class">Login</span></button>
+                  <a href = "/register" class="back-btn"><span class="btn-class">Register</span></a>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

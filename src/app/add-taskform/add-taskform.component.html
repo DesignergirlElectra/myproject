@@ -1,0 +1,41 @@
+<!-- add task form  -->
+<div class = "form-wrap">
+    <div class="task-wrap">
+        <div class="col-md-4">
+            <div class = "task">
+                <div class="back-btn"><a class ="btn-class" href = "dash" >Back</a></div>
+                    <h1>Add New task</h1>
+                        <div class="form-detail">
+                            <form [formGroup]="addtaskform" (ngSubmit)="submit()">
+                                <div class="form-group mb-3">
+                                    <label for ="taskname">Task Name</label>
+                                    <input type = "text" name = "taskname" class="form-control" formControlName="taskname">
+                                    <div *ngIf="taskname?.touched && taskname?.invalid">
+                                        Taskname is required
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for ="description">Task Details </label>
+                                    <textarea  name = "description"placeholder= "Enter Your task details" class="form-control"formControlName="taskdetails"></textarea>
+                                    <div *ngIf="taskdetails?.touched && taskdetails?.invalid">
+                                        Task Details is required.
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for ="author">Author</label>
+                                    <input type = "text" name = "author"placeholder= "Enter author name " class="form-control"formControlName="author">
+                                    <div *ngIf="author?.touched && author?.invalid">
+                                        Task Details is required.
+                                    </div>
+                                </div>
+                                <div class="back-btn">
+                                    <button type="submit" class="btn btn-class" [disabled]="addtaskform.untouched && addtaskform.invalid">
+                                     Submit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+

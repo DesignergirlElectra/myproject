@@ -1,0 +1,10 @@
+.partner-row ul{
+    padding: 4% 0;
+    gap: 35px;
+    margin-bottom: 0;
+    display: inline-flex;
+    list-style: none;
+}
+.partner-row ul li a{
+    text-decoration: none;
+}
