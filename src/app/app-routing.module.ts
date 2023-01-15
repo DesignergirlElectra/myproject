@@ -20,7 +20,8 @@ const routes: Routes = [
   {path:'userdash', component: UserDashboardComponent},
   {path:'home' , component : HomeComponent},
   {path : 'feed' , component : EmployfedtempformComponent},
-  {path:'', redirectTo:'home',pathMatch:'full'}
+  {path:'', redirectTo:'home',pathMatch:'full'},
+  {path:'**', redirectTo:'home',pathMatch:'full'}
 ];
 
 @NgModule({

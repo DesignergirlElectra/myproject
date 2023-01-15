@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './employfedtempform.component.html',
   styleUrls: ['./employfedtempform.component.css']
 })
-export class EmployfedtempformComponent implements OnInit {
+export class EmployfedtempformComponent {
   feedbackform= {
     name: '',
     empid: '',
@@ -13,11 +13,13 @@ export class EmployfedtempformComponent implements OnInit {
   }
 
   constructor() { }
-feedsub(){
-
+feedsub(fitem:any){
+  if (fitem.invalid) {
+    // here potentially add some visual feedback for a user
+     return;
+  }
 alert("form submitted successfully");
 }
-  ngOnInit(): void {
-  }
 
 }
+
