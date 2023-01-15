@@ -16,7 +16,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { TeamSecComponent } from './team-sec/team-sec.component';
-import { PartnerComponent } from './partner/partner.component'
+import { PartnerComponent } from './partner/partner.component';
+import { EmployfedtempformComponent } from './employfedtempform/employfedtempform.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PartnerComponent } from './partner/partner.component'
     HomeComponent,
     TeamSecComponent,
     PartnerComponent,
+    EmployfedtempformComponent,
     
   ],
   imports: [

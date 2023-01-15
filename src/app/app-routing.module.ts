@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddTaskformComponent } from './add-taskform/add-taskform.component';
 import { BannerComponent } from './banner/banner.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployfedtempformComponent } from './employfedtempform/employfedtempform.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'userdash', component: UserDashboardComponent},
   {path:'home' , component : HomeComponent},
+  {path : 'feed' , component : EmployfedtempformComponent},
   {path:'', redirectTo:'home',pathMatch:'full'}
 ];
 

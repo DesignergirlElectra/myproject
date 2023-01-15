@@ -1,0 +1,36 @@
+<!-- template driven form with proper validation  -->
+
+<div class="feedback">
+    <div class="container">
+        <div class="feed-form">
+            <form #feedback = "ngForm" (ngSubmit)="feedsub()">
+                <div class="form-group">
+                    <label for = "name">Name</label>
+                    <input type = "text" name = "name" #name="ngModel" class="form-control" required minlength="2" maxlength="12" [(ngModel)]="feedbackform.name" ngModel>
+                    <div *ngIf="feedback.touched && feedback.invalid || feedback.dirty">
+                        <div *ngIf="name.errors?.['required']" class="alert danger">Name Must be needed</div>
+                        <div *ngIf="name.errors?.['minlength']" class="alert-danger">Minimum length{{name.errors?.['minlength'].requiredLength}} must two</div>
+                        <div *ngIf="name.errors?.['maxlength']"class="alert-danger">Maxlength must {{name.errors?.['maxlength'].required}} be 12 character</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for = "empid">Employee ID</label>
+                    <input type = "number" name = "empid" class="form-control" required minlength="6" maxlength="6" #emp="ngModel" [(ngModel)]="feedbackform.empid" ngModel>
+                    <div *ngIf="feedback.touched && feedback.invalid || feedback.dirty">
+                        <div *ngIf="emp.errors?.['required']" class="alert danger">Emp Must be needed</div>
+                        <div *ngIf="name.errors?.['maxlength']"class="alert-danger">Maxlength must {{name.errors?.['maxlength'].required}} be 6 character</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for = "feedback">Feedback</label>
+                    <textarea name = "feedback" class="form-control" #feed="ngModel" required  [(ngModel)]="feedbackform.feedback" ngModel></textarea>
+                    <div *ngIf="feedback.touched && feedback.invalid || feedback.dirty">
+                        <div *ngIf="feed.errors?.['required']" class="alert danger">Emp Must be needed</div>
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
